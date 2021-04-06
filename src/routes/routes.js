@@ -5,8 +5,8 @@ const OffersController = require("../controllers/OffersController");
 const authController = require("../middlewares/auth");
 const routes = Router();
 
-routes.get("/advertiser", AdvertiserController.index);
-routes.post("/advertiser", AdvertiserController.store);
+routes.get("/advertisers", AdvertiserController.index);
+routes.post("/advertisers", AdvertiserController.store);
 routes.post("/login", AdvertiserController.login);
 
 routes.post(
