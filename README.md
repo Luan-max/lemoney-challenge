@@ -16,10 +16,66 @@
 ## Advertisers
 
     Method: POST
-    url: http://localhost:3333/api/v1/advertisers \
-        --header 'Content-Type: application/json' \
-        --data '{
-            "name": "Walmart"
-            "email": "walmart@teste.com.br,
+    url: http://localhost:3333/advertisers \
+    header: 'Content-Type: application/json' \
+    data: {
+        "name": "Walmart"
+        "email": "walmart@teste.com.br,
+        "password": 4669
+    }'
 
-        }'
+    Method: GET
+    url: http://localhost:3333/advertisers \
+    header: 'Content-Type: application/json' \
+    data: {}'
+
+## Offers
+
+    Method: POST
+    url: http://localhost:3333/advertiser/:advertiser_id/offers \
+    header: 'Content-Type: application/json' \
+    data: {
+        "advertiser_name": "Walmart",
+        "url": "url do produto",
+        "description": "Descrição",
+        "startAt": "2021-11-02 12:12:22",
+        "endsAt": "2021-11-02 12:12:22",
+        "state": "false",
+        "premium": "false",
+    }'
+
+    Method: GET
+    url: http://localhost:3333/advertiser/:advertiser_id/offers \
+    header: 'Content-Type: application/json' \
+    data: {}'
+
+    Method: GET
+    url: http://localhost:3333/advertiser/offers \
+    header: 'Content-Type: application/json' \
+    data: {}'
+
+    Method: PUT
+    url: http://localhost:3333/advertiser/:advertiser_id/offers/:offer_id \
+    header: 'Content-Type: application/json' \
+    data: {
+        "advertiser_name": "Walmart",
+        "url": "url do produto",
+        "description": "Descrição",
+        "startAt": "2021-11-02 12:12:22",
+        "endsAt": "2021-11-02 12:12:22",
+        "state": "true",
+        "premium": "false",
+    }'
+
+    Method: DELETE
+    url: http://localhost:3333/advertiser/:advertiser_id/offers/:offer_id \
+    header: 'Content-Type: application/json' \
+    data: {
+        "advertiser_name": "Walmart",
+        "url": "url do produto",
+        "description": "Descrição",
+        "startAt": "2021-11-02 12:12:22",
+        "endsAt": "2021-11-02 12:12:22",
+        "state": "true",
+        "premium": "false",
+    }'
